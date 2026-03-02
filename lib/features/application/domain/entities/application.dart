@@ -1,0 +1,91 @@
+import 'package:edu_apply/core/const/enums/application_status.dart';
+import 'package:edu_apply/core/const/enums/campus_type.dart';
+import 'package:edu_apply/core/const/enums/country_code.dart';
+import 'package:edu_apply/core/const/enums/currency.dart';
+import 'package:edu_apply/core/const/enums/degree_type.dart';
+import 'package:edu_apply/core/const/enums/source.dart';
+import 'package:edu_apply/core/const/enums/university_type.dart';
+
+class Application {
+  String id;
+  String? counsellorId;
+  String universityProgramId;
+  String universityId;
+  String? agencyId;
+  String? parentAgencyId;
+  String? workerId;
+  String studentId;
+  String periodId;
+  String periodLabel;
+  String periodYear;
+  String? code;
+  String? universityProgramName;
+  DateTime? programStartMonth;
+  String universityName;
+  String universityApplyCode;
+  String? agencyName;
+  String workerName;
+  String studentName;
+  String? counsellorName;
+  String? agencyType;
+  String educationLanguage;
+  Source? source;
+  ApplicationStatus status;
+  DateTime? createdAt;
+  DateTime? updatedAt;
+  DateTime? deletedAt;
+  double tuitionFee;
+  double amountPaid;
+  double amountToPay;
+  double discountPercentageGiven;
+  DegreeType? degreeType;
+  CampusType? campusType;
+  AvailableCountryCode? studentCountry;
+  UniversityType? universityType;
+  String? lastStatusMessage;
+  bool approved;
+  bool applied;
+  Currency tuitionCurrency;
+
+  Application({
+    required this.id,
+    required this.counsellorId,
+    required this.universityProgramId,
+    required this.universityId,
+    required this.agencyId,
+    required this.parentAgencyId,
+    required this.workerId,
+    required this.studentId,
+    required this.periodId,
+    required this.periodLabel,
+    required this.periodYear,
+    required this.code,
+    required this.universityProgramName,
+    required this.programStartMonth,
+    required this.universityName,
+    required this.universityApplyCode,
+    required this.agencyName,
+    required this.workerName,
+    required this.studentName,
+    required this.counsellorName,
+    required this.agencyType,
+    required this.educationLanguage,
+    required this.source,
+    required this.status,
+    required this.createdAt,
+    required this.updatedAt,
+    required this.deletedAt,
+    required this.tuitionFee,
+    required this.amountPaid,
+    required this.amountToPay,
+    required this.discountPercentageGiven,
+    required this.degreeType,
+    required this.campusType,
+    required this.studentCountry,
+    required this.universityType,
+    required this.lastStatusMessage,
+    required this.approved,
+    required this.applied,
+    required this.tuitionCurrency,
+  });
+}

@@ -25,11 +25,53 @@ class $AssetsAnimationsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/login_image.png
+  AssetGenImage get loginImage =>
+      const AssetGenImage('assets/images/login_image.png');
+
   /// File path: assets/images/logo.png
   AssetGenImage get logo => const AssetGenImage('assets/images/logo.png');
 
+  /// File path: assets/images/logo_appbar.png
+  AssetGenImage get logoAppbar =>
+      const AssetGenImage('assets/images/logo_appbar.png');
+
+  /// File path: assets/images/onboarding_1.png
+  AssetGenImage get onboarding1 =>
+      const AssetGenImage('assets/images/onboarding_1.png');
+
+  /// File path: assets/images/onboarding_2.png
+  AssetGenImage get onboarding2 =>
+      const AssetGenImage('assets/images/onboarding_2.png');
+
+  /// File path: assets/images/onboarding_3.png
+  AssetGenImage get onboarding3 =>
+      const AssetGenImage('assets/images/onboarding_3.png');
+
+  /// File path: assets/images/onboarding_4.png
+  AssetGenImage get onboarding4 =>
+      const AssetGenImage('assets/images/onboarding_4.png');
+
+  /// File path: assets/images/placeholder_avatar.jpg
+  AssetGenImage get placeholderAvatar =>
+      const AssetGenImage('assets/images/placeholder_avatar.jpg');
+
+  /// File path: assets/images/placeholder_image.png
+  AssetGenImage get placeholderImage =>
+      const AssetGenImage('assets/images/placeholder_image.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [logo];
+  List<AssetGenImage> get values => [
+        loginImage,
+        logo,
+        logoAppbar,
+        onboarding1,
+        onboarding2,
+        onboarding3,
+        onboarding4,
+        placeholderAvatar,
+        placeholderImage
+      ];
 }
 
 class Assets {

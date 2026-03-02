@@ -1,0 +1,152 @@
+import 'package:edu_apply/core/common/models/additional_document_model.dart';
+import 'package:edu_apply/core/common/models/attachment_model.dart';
+import 'package:edu_apply/core/const/enums/country_code.dart';
+import 'package:edu_apply/core/const/enums/gender.dart';
+import 'package:edu_apply/core/const/enums/source.dart';
+import 'package:edu_apply/features/profile/data/models/language_proficiency_model.dart';
+import 'package:edu_apply/features/profile/data/models/passport_Information_model.dart';
+import 'package:edu_apply/features/profile/data/models/profile_model.dart';
+import 'package:edu_apply/features/profile/data/models/student_education_model.dart';
+
+final ProfileModel dummyProfile = ProfileModel(
+  id: 'student-001',
+  workerId: 'worker-001',
+  agencyId: 'agency-001',
+  parentAgencyId: 'parent-agency-001',
+  counsellorId: 'counsellor-001',
+  referrerId: 'referrer-001',
+  email: 'john.doe@example.com',
+  firstName: 'John',
+  lastName: 'Doe',
+  agencyName: 'Global Education Agency',
+  password: null,
+  residenceCountry: AvailableCountryCode.tr,
+  nationality: AvailableCountryCode.us,
+  sex: Gender.male,
+  source: Source.website,
+  residenceCity: 'Istanbul',
+  address: '123 Example Street, Kadikoy',
+  title: 'Mr.',
+  motherName: 'Jane Doe',
+  fatherName: 'Richard Doe',
+  phone: '+905551234567',
+  birthdate: DateTime(2000, 5, 15),
+  educationHistory: StudentEducationModel(
+    id: 'edu-001',
+    studentId: 'student-001',
+    nameOfSchool: 'Springfield High School',
+    countryCode: AvailableCountryCode.us,
+    graduationYear: '2018',
+    degreeName: 'High School Diploma',
+    cgpa: '3.75',
+    transcript: AdditionalDocumentModel(
+      id: 'doc-transcript-001',
+      studentId: 'student-001',
+      file: AttachmentModel(
+        id: 'att-transcript',
+        url: 'https://picsum.photos/seed/transcript/200',
+        fileType: 'application/pdf',
+        size: 4096,
+      ),
+      name: 'Transcript',
+      grade: null,
+      createdAt: DateTime(2025, 9, 1),
+      updatedAt: DateTime(2025, 9, 1),
+    ),
+    diploma: AdditionalDocumentModel(
+      id: 'doc-diploma-001',
+      studentId: 'student-001',
+      file: AttachmentModel(
+        id: 'att-diploma',
+        url: 'https://picsum.photos/seed/diploma/200',
+        fileType: 'application/pdf',
+        size: 3072,
+      ),
+      name: 'Diploma',
+      grade: null,
+      createdAt: DateTime(2025, 9, 1),
+      updatedAt: DateTime(2025, 9, 1),
+    ),
+  ),
+  profilePicture: AttachmentModel(
+    id: 'att-profile-pic',
+    url: 'https://picsum.photos/seed/profilepic/200',
+    fileType: 'image/jpeg',
+    size: 2048,
+  ),
+  passport: PassportInformationModel(
+    id: 'passport-001',
+    studentId: 'student-001',
+    dateOfIssue: DateTime(2022, 3, 10),
+    dateOfExpire: DateTime(2032, 3, 10),
+    passportNumber: 'AB1234567',
+    needVisa: true,
+    file: AdditionalDocumentModel(
+      id: 'doc-passport-001',
+      studentId: 'student-001',
+      file: AttachmentModel(
+        id: 'att-passport',
+        url: 'https://picsum.photos/seed/passport/200',
+        fileType: 'application/pdf',
+        size: 5120,
+      ),
+      name: 'Passport Scan',
+      grade: null,
+      createdAt: DateTime(2025, 9, 1),
+      updatedAt: DateTime(2025, 9, 1),
+    ),
+  ),
+  englishProficiencyExam: LanguageProficiencyModel(
+    id: 'lang-001',
+    studentId: 'student-001',
+    language: 'English',
+    dateOfExam: DateTime(2024, 6, 15),
+    grade: '95',
+    certificate: AdditionalDocumentModel(
+      id: 'doc-lang-cert-001',
+      studentId: 'student-001',
+      file: AttachmentModel(
+        id: 'att-lang-cert',
+        url: 'https://picsum.photos/seed/langcert/200',
+        fileType: 'application/pdf',
+        size: 1024,
+      ),
+      name: 'TOEFL Certificate',
+      grade: '95',
+      createdAt: DateTime(2025, 9, 1),
+      updatedAt: DateTime(2025, 9, 1),
+    ),
+  ),
+  additionalDocuments: [
+    AdditionalDocumentModel(
+      id: 'doc-additional-001',
+      studentId: 'student-001',
+      file: AttachmentModel(
+        id: 'att-additional-1',
+        url: 'https://picsum.photos/seed/addoc1/200',
+        fileType: 'application/pdf',
+        size: 2048,
+      ),
+      name: 'Recommendation Letter',
+      grade: null,
+      createdAt: DateTime(2025, 10, 1),
+      updatedAt: DateTime(2025, 10, 1),
+    ),
+    AdditionalDocumentModel(
+      id: 'doc-additional-002',
+      studentId: 'student-001',
+      file: AttachmentModel(
+        id: 'att-additional-2',
+        url: 'https://picsum.photos/seed/addoc2/200',
+        fileType: 'application/pdf',
+        size: 1536,
+      ),
+      name: 'Motivation Letter',
+      grade: null,
+      createdAt: DateTime(2025, 10, 5),
+      updatedAt: DateTime(2025, 10, 5),
+    ),
+  ],
+  isVerified: true,
+  referrerUserRole: 'COUNSELLOR',
+);

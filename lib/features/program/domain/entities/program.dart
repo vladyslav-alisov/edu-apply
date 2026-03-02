@@ -1,0 +1,78 @@
+import 'package:edu_apply/core/common/entities/attachment.dart';
+import 'package:edu_apply/core/const/enums/campus_type.dart';
+import 'package:edu_apply/core/const/enums/country_code.dart';
+import 'package:edu_apply/core/const/enums/currency.dart';
+import 'package:edu_apply/core/const/enums/degree_type.dart';
+import 'package:edu_apply/core/const/enums/mode_of_study.dart';
+import 'package:edu_apply/core/const/enums/university_type.dart';
+import 'package:edu_apply/features/program/domain/entities/program_application_date.dart';
+
+class Program {
+  String id;
+  String language;
+  String universityId;
+  String name;
+  String description;
+  String websiteUrl;
+  String? category;
+  String faculty;
+  DateTime applicationStartDate;
+  DateTime applicationEndDate;
+  String? scope;
+  DateTime programStartMonth;
+  List<ProgramApplicationDate> dates;
+  Currency currency;
+  DegreeType degreeType;
+  ModeOfStudy modeOfStudy;
+  CampusType campusType;
+  double tuitionFee;
+  double? deposit;
+  Attachment? image;
+  Attachment? brochure;
+  int duration;
+  int? discountPercentage;
+  int? numberOfInstallations;
+  int? siblingDiscountPercentage;
+  int? cashPaymentDiscountPercentage;
+  String universityName;
+  UniversityType universityType;
+  AvailableCountryCode? universityCountry;
+  double maximumCommission;
+  Attachment universityImage;
+  Attachment universityLogo;
+
+  Program({
+    required this.id,
+    required this.universityId,
+    required this.language,
+    required this.name,
+    required this.description,
+    required this.websiteUrl,
+    required this.category,
+    required this.faculty,
+    required this.applicationStartDate,
+    required this.applicationEndDate,
+    required this.scope,
+    required this.programStartMonth,
+    required this.dates,
+    required this.currency,
+    required this.degreeType,
+    required this.modeOfStudy,
+    required this.campusType,
+    required this.tuitionFee,
+    required this.deposit,
+    required this.image,
+    required this.brochure,
+    required this.duration,
+    required this.discountPercentage,
+    required this.numberOfInstallations,
+    required this.siblingDiscountPercentage,
+    required this.cashPaymentDiscountPercentage,
+    required this.universityName,
+    required this.universityType,
+    required this.universityCountry,
+    required this.maximumCommission,
+    required this.universityImage,
+    required this.universityLogo,
+  });
+}
